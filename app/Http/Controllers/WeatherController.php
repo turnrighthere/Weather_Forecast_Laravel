@@ -69,7 +69,7 @@ class WeatherController extends Controller
             'city' => $request->city,
         ]);
         
-        return redirect()->back()->with('success', 'You have successfully subscribed.');
+        return redirect()->back()->with('success', 'You have successfully subscribed');
     }
-    
+
 }
