@@ -14,3 +14,8 @@ Route::get('/email-weather',[WeatherController::class,'sendEmail']);
 
 Route::get('/subscribers', [SubscriberController::class, 'index'])->name('subscribers.index');
 Route::get('/send-emails', [SubscriberController::class, 'sendEmails'])->name('subscribers.sendEmails');
+
+// Route::get('/subscribe', [SubscriberController::class, 'showSubscriptionForm'])->name('subscribe.form');
+// Route::post('/subscribe', [SubscriberController::class, 'subscribe'])->name('subscribe');
+Route::get('/unsubscribe/{token}', [SubscriberController::class, 'unsubscribe'])->name('unsubscribe');
+Route::get('/verify-email/{token}', [SubscriberController::class, 'verifyEmail'])->name('verify.email');
