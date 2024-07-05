@@ -24,5 +24,6 @@ class Kernel extends ConsoleKernel
     {
         // Schedule the daily weather email command
         $schedule->command('send:daily-weather-email')->daily();
+        $schedule->command('call:send-emails')->daily();
     }
 }
